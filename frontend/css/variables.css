@@ -1,0 +1,89 @@
+/* ════════════════════════════════════════════════════
+   VARIABLES.CSS — Design Tokens
+   Travel & Tours Website
+   ════════════════════════════════════════════════════ */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Lato:wght@300;400;700&display=swap');
+
+:root {
+  /* ── Colors ── */
+  --color-primary:      #022c22;
+  --color-secondary:    #065f46;
+  --color-accent:       #FFD700;
+  --color-accent-dark:  #eab308;
+  --color-accent-alt:   #FF6B6B;
+  --color-success:      #22C55E;
+  --color-error:        #EF4444;
+  --color-bg:           #f8fafc;
+  --color-bg-soft:      #f0fdf4;
+  --color-bg-card:      #ffffff;
+  --color-text:         #022c22;
+  --color-text-muted:   #475569;
+  --color-text-light:   #94A3B8;
+  --color-border:       #10b981;
+  --color-overlay:      rgba(2, 44, 34, 0.55);
+  --color-overlay-dark: rgba(2, 44, 34, 0.75);
+
+  /* ── Gradients ── */
+  --gradient-primary:   linear-gradient(135deg, #022c22 0%, #065f46 100%);
+  --gradient-hero:      linear-gradient(180deg, rgba(2,44,34,0.3) 0%, rgba(2,44,34,0.8) 100%);
+  --gradient-card:      linear-gradient(180deg, transparent 40%, rgba(2,44,34,0.9) 100%);
+  --gradient-gold:      linear-gradient(135deg, #FFD700, #FFA500);
+  --gradient-soft:      linear-gradient(180deg, #F8FAFF 0%, #FFFFFF 100%);
+
+  /* ── Typography ── */
+  --font-heading: 'Montserrat', sans-serif;
+  --font-body:    'Lato', sans-serif;
+
+  --fs-xs:   clamp(0.7rem, 1.5vw, 0.8rem);
+  --fs-sm:   clamp(0.85rem, 2vw, 0.95rem);
+  --fs-base: clamp(0.95rem, 2.5vw, 1.05rem);
+  --fs-md:   clamp(1.05rem, 3vw, 1.2rem);
+  --fs-lg:   clamp(1.15rem, 3.5vw, 1.4rem);
+  --fs-xl:   clamp(1.4rem, 4vw, 1.8rem);
+  --fs-2xl:  clamp(1.8rem, 5vw, 2.5rem);
+  --fs-3xl:  clamp(2.2rem, 6vw, 3.2rem);
+  --fs-4xl:  clamp(2.8rem, 8vw, 4.5rem);
+  --fs-hero: clamp(3rem, 10vw, 5.5rem);
+
+  /* ── Spacing ── */
+  --space-1:  4px;
+  --space-2:  8px;
+  --space-3:  12px;
+  --space-4:  16px;
+  --space-5:  20px;
+  --space-6:  24px;
+  --space-8:  32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+  --space-24: 96px;
+
+  /* ── Border Radius ── */
+  --radius-sm:   6px;
+  --radius-md:   12px;
+  --radius-lg:   20px;
+  --radius-xl:   32px;
+  --radius-full: 9999px;
+
+  /* ── Shadows ── */
+  --shadow-xs:  0 1px 3px rgba(0, 31, 63, 0.06);
+  --shadow-sm:  0 2px 8px rgba(0, 31, 63, 0.08);
+  --shadow-md:  0 4px 16px rgba(0, 31, 63, 0.12);
+  --shadow-lg:  0 8px 32px rgba(0, 31, 63, 0.16);
+  --shadow-xl:  0 16px 48px rgba(0, 31, 63, 0.2);
+  --shadow-gold: 0 4px 20px rgba(255, 215, 0, 0.35);
+
+  /* ── Transitions ── */
+  --dur-fast:   0.15s;
+  --dur-normal: 0.3s;
+  --dur-slow:   0.6s;
+  --ease-out:   cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* ── Layout ── */
+  --max-width:     1280px;
+  --nav-height:    72px;
+  --section-pad-y: clamp(60px, 10vw, 120px);
+}

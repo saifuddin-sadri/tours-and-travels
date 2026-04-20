@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Package Details — TravelIndia Tours</title>
+  <meta name="description" content="Detailed tour package information — itinerary, inclusions, pricing, and booking.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar scrolled" id="navbar">
+  <div class="navbar-inner">
+    <a href="/" class="nav-logo">
+      <div class="nav-logo-icon">🌍</div>
+      <div>
+        <div class="nav-logo-text">Travel<span>India</span></div>
+        <div class="nav-logo-sub">Tours & Travels</div>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/"         class="nav-link">Home</a></li>
+      <li><a href="/packages" class="nav-link active">Packages</a></li>
+      <li><a href="/#services" class="nav-link">Services</a></li>
+      <li><a href="/contact"  class="nav-link">Contact</a></li>
+      <li><a href="/#contact" class="nav-link nav-cta">Book Now</a></li>
+    </ul>
+    <button class="nav-hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="nav-mobile">
+  <a href="/"         class="nav-link">🏠 Home</a>
+  <a href="/packages" class="nav-link">🗺️ Packages</a>
+  <a href="/#services" class="nav-link">⭐ Services</a>
+  <a href="/contact"  class="nav-link">📞 Contact</a>
+  <a href="/#contact" class="btn btn-primary btn-full" style="text-align:center">Book Now</a>
+</div>
+
+<!-- DETAIL HERO -->
+<div class="detail-hero" style="margin-top:var(--nav-height)">
+  <img id="detail-hero-img"
+       src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&q=80"
+       alt="Package destination">
+  <div class="detail-hero-overlay">
+    <div class="container detail-hero-content">
+      <div class="breadcrumb" style="margin-bottom:var(--space-3)">
+        <a href="/">Home</a><span>/</span>
+        <a href="/packages">Packages</a><span>/</span>
+        <span id="breadcrumb-title">Loading...</span>
+      </div>
+      <div class="detail-rating" id="detail-rating">
+        <span class="stars">★★★★★</span>
+        <span>4.9/5 (24 reviews)</span>
+      </div>
+      <h1 id="detail-title">Loading package...</h1>
+      <div class="detail-meta" id="detail-meta">
+        <div class="detail-meta-item">📍 Destination</div>
+        <div class="detail-meta-item">⏱ Duration</div>
+        <div class="detail-meta-item">👥 Group Size</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- DETAIL BODY -->
+<div class="detail-body">
+  <div class="container">
+    <div class="detail-grid">
+
+      <!-- MAIN CONTENT -->
+      <div>
+
+        <!-- Overview -->
+        <section style="margin-bottom:var(--space-10)">
+          <div class="section-tag" style="margin-bottom:var(--space-3)">📖 Overview</div>
+          <h2 class="section-title" style="font-size:var(--fs-xl);margin-bottom:var(--space-4)">About This Package</h2>
+          <p id="detail-description" style="font-size:var(--fs-md);line-height:1.8;color:var(--color-text-muted)">Loading...</p>
+        </section>
+
+        <!-- Itinerary -->
+        <section style="margin-bottom:var(--space-10)">
+          <div class="section-tag" style="margin-bottom:var(--space-3)">🗓️ Itinerary</div>
+          <h2 class="section-title" style="font-size:var(--fs-xl);margin-bottom:var(--space-6)">Your Journey Day by Day</h2>
+          <div id="detail-itinerary">
+            <div class="spinner-wrapper"><div class="spinner"></div></div>
+          </div>
+        </section>
+
+        <!-- Inclusions & Exclusions -->
+        <section style="margin-bottom:var(--space-10)">
+          <div class="section-tag" style="margin-bottom:var(--space-3)">✅ What's Included</div>
+          <h2 class="section-title" style="font-size:var(--fs-xl);margin-bottom:var(--space-6)">Inclusions & Exclusions</h2>
+          <div class="inc-exc-grid">
+            <div>
+              <h3 class="inc-exc-title" style="color:var(--color-success)">✅ Included</h3>
+              <div id="detail-inclusions"></div>
+            </div>
+            <div>
+              <h3 class="inc-exc-title" style="color:var(--color-error)">❌ Excluded</h3>
+              <div id="detail-exclusions"></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Gallery -->
+        <section style="margin-bottom:var(--space-10)">
+          <div class="section-tag" style="margin-bottom:var(--space-3)">📸 Gallery</div>
+          <h2 class="section-title" style="font-size:var(--fs-xl);margin-bottom:var(--space-6)">Photo Gallery</h2>
+          <div class="gallery-grid" id="detail-gallery">
+            <div class="skeleton skeleton-img" style="border-radius:var(--radius-sm)"></div>
+            <div class="skeleton skeleton-img" style="border-radius:var(--radius-sm)"></div>
+            <div class="skeleton skeleton-img" style="border-radius:var(--radius-sm)"></div>
+          </div>
+        </section>
+
+        <!-- Pricing -->
+        <section style="margin-bottom:var(--space-10)">
+          <div class="section-tag" style="margin-bottom:var(--space-3)">💰 Pricing</div>
+          <h2 class="section-title" style="font-size:var(--fs-xl);margin-bottom:var(--space-4)">Pricing Breakdown</h2>
+          <div class="pricing-table" id="detail-pricing"></div>
+          <p style="font-size:var(--fs-xs);color:var(--color-text-muted);margin-top:var(--space-3)">
+            * Prices are per person. Group discounts available. Book 2+ people and get 5% off!
+          </p>
+        </section>
+
+        <!-- Reviews -->
+        <section style="margin-bottom:var(--space-10)">
+          <div class="section-tag" style="margin-bottom:var(--space-3)">💬 Reviews</div>
+          <h2 class="section-title" style="font-size:var(--fs-xl);margin-bottom:var(--space-6)">Traveler Reviews</h2>
+          <div id="detail-reviews" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:var(--space-5)">
+            <div class="spinner-wrapper"><div class="spinner"></div></div>
+          </div>
+        </section>
+
+      </div>
+
+      <!-- SIDEBAR -->
+      <aside class="detail-sidebar">
+        <div class="booking-card">
+          <div class="booking-card-header">
+            <div class="booking-price" id="booking-price">₹--</div>
+            <div class="booking-per">per person (all inclusive)</div>
+          </div>
+          <div class="booking-card-body">
+            <div class="booking-info-row">
+              <span class="booking-info-label">Duration</span>
+              <span class="booking-info-value" id="booking-duration">—</span>
+            </div>
+            <div class="booking-info-row">
+              <span class="booking-info-label">Group Size</span>
+              <span class="booking-info-value" id="booking-group">—</span>
+            </div>
+            <div class="booking-info-row">
+              <span class="booking-info-label">Availability</span>
+              <span class="booking-info-value" id="booking-spots">—</span>
+            </div>
+
+            <div style="margin-top:var(--space-5);display:flex;flex-direction:column;gap:var(--space-3)">
+              <a href="#contact-section" class="btn btn-primary btn-full">📩 Book This Package</a>
+              <button class="btn btn-whatsapp btn-full" data-whatsapp="this package">💬 WhatsApp Inquiry</button>
+              <a href="tel:+919876543210" class="btn btn-outline btn-full">📞 Call Us</a>
+            </div>
+
+            <div class="trust-badges" style="margin-top:var(--space-5)">
+              <span class="trust-badge">✅ 100% Satisfaction</span>
+              <span class="trust-badge">🛡️ Secure Booking</span>
+              <span class="trust-badge">📞 24/7 Support</span>
+              <span class="trust-badge">👨‍💼 Expert Guides</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick Inquiry CTA -->
+        <div style="margin-top:var(--space-5);padding:var(--space-5);background:var(--color-bg-soft);border:1px solid var(--color-border);border-radius:var(--radius-md);text-align:center">
+          <p style="font-size:var(--fs-sm);color:var(--color-text-muted);margin-bottom:var(--space-3)">
+            📅 Next batch available soon. Only limited spots left!
+          </p>
+          <a href="#contact-section" class="btn btn-dark btn-sm btn-full">Check Availability</a>
+        </div>
+      </aside>
+    </div>
+  </div>
+</div>
+
+<!-- CONTACT / BOOKING SECTION -->
+<section class="section" id="contact-section" style="background:var(--gradient-primary)">
+  <div class="container">
+    <div class="section-header center anim-fade-up">
+      <span class="section-tag" style="background:rgba(255,215,0,0.15);border-color:rgba(255,215,0,0.4)">📩 Book Now</span>
+      <h2 class="section-title" style="color:#fff">Ready to Book This <span>Package?</span></h2>
+      <p style="color:rgba(255,255,255,0.7);text-align:center">Send us your inquiry and we'll confirm your spot within 24 hours.</p>
+    </div>
+
+    <div style="max-width:600px;margin:0 auto">
+      <form id="inquiry-form" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="inp-name">Full Name *</label>
+            <input type="text" id="inp-name" class="form-control" placeholder="Your full name" required minlength="3">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="inp-email">Email *</label>
+            <input type="email" id="inp-email" class="form-control" placeholder="you@email.com" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="inp-phone">Phone *</label>
+            <input type="tel" id="inp-phone" class="form-control" placeholder="+91 98765 43210" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="inp-destination">Package / Destination *</label>
+            <select id="inp-destination" class="form-control" required>
+              <option value="">— Select —</option>
+              <option value="goa">Goa Getaway</option>
+              <option value="manali">Manali Snow Adventure</option>
+              <option value="rajasthan">Rajasthan Royal Tour</option>
+              <option value="kashmir">Kashmir Paradise</option>
+              <option value="kerala">Kerala Backwaters</option>
+              <option value="uttarakhand">Himalayan Trek</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="inp-date">Preferred Travel Date *</label>
+          <input type="date" id="inp-date" class="form-control" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="inp-message">Special Requirements</label>
+          <textarea id="inp-message" class="form-control" rows="3" placeholder="Group size, dietary needs, special requests..." maxlength="500"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-full btn-lg">📩 Confirm My Booking Inquiry</button>
+        <p style="text-align:center;margin-top:12px;font-size:var(--fs-xs);color:rgba(255,255,255,0.45)">🔒 Your data is safe. No spam.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="nav-logo">
+          <div class="nav-logo-icon">🌍</div>
+          <div>
+            <div class="nav-logo-text">Travel<span>India</span></div>
+            <div class="nav-logo-sub">Tours & Travels</div>
+          </div>
+        </a>
+        <p>India's most trusted travel partner since 2015.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <div class="footer-links">
+          <a href="/">Home</a>
+          <a href="/packages">All Packages</a>
+          <a href="/contact">Contact</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Destinations</h4>
+        <div class="footer-links">
+          <a href="/packages">Goa</a><a href="/packages">Manali</a>
+          <a href="/packages">Kashmir</a><a href="/packages">Kerala</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <div class="footer-contact-item">
+          <span class="icon">📞</span><a href="tel:+919876543210">+91 98765 43210</a>
+        </div>
+        <div class="footer-contact-item">
+          <span class="icon">📧</span><a href="mailto:info@travelindia.com">info@travelindia.com</a>
+        </div>
+      </div>
+    </div>
+    <hr class="footer-divider">
+    <div class="footer-bottom">
+      <p>© 2024 TravelIndia Tours. All rights reserved.</p>
+      <div class="footer-social">
+        <a href="#">📘</a><a href="#">📸</a>
+        <a href="https://wa.me/919876543210" target="_blank" rel="noopener">💬</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/919876543210" class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
+<button class="scroll-top" aria-label="Scroll to top">↑</button>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"></script>
+<script type="module">
+  import { initAnimations, showToast } from '/js/gsap-animations.js';
+  import { fetchPackageById }          from '/js/api-client.js';
+  import { renderPackageDetail }       from '/js/package-renderer.js';
+  import { initContactForm, initWhatsAppButtons } from '/js/form-handler.js';
+
+  document.addEventListener('DOMContentLoaded', async () => {
+    initAnimations();
+    initContactForm();
+
+    // Extract package ID from URL
+    const pathParts = window.location.pathname.split('/');
+    const pkgId     = pathParts[pathParts.length - 1];
+
+    if (!pkgId || pkgId === 'package-detail.html') {
+      document.getElementById('detail-title').textContent = 'Package not found';
+      return;
+    }
+
+    try {
+      const res = await fetchPackageById(pkgId);
+      const pkg = res.data;
+      renderPackageDetail(pkg);
+      document.getElementById('breadcrumb-title').textContent = pkg.title;
+
+      // Pre-select package in form
+      const destSel = document.getElementById('inp-destination');
+      if (destSel) {
+        const opt = [...destSel.options].find(o => pkg.destination.toLowerCase().includes(o.value));
+        if (opt) opt.selected = true;
+      }
+
+      initWhatsAppButtons();
+    } catch (err) {
+      document.getElementById('detail-title').textContent = 'Package not found';
+      showToast('Could not load package details.', 'error');
+    }
+  });
+</script>
+</body>
+</html>
