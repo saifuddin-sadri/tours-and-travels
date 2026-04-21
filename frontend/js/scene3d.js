@@ -344,9 +344,22 @@
         </div>
       `).join('');
 
+      // Click handler fallback for "Details" buttons (handles 3D layering issues)
+      grid.addEventListener('click', (e) => {
+        const btn = e.target.closest('.btn-gold');
+        if (btn && btn.tagName === 'A') {
+          // Normal behavior might be blocked by 3D transforms, so we manually navigate
+          e.preventDefault();
+          const url = btn.getAttribute('href');
+          if (url) window.location.href = url;
+        }
+      });
+
       // WhatsApp buttons on cards
       grid.querySelectorAll('[data-wa]').forEach(btn => {
-        btn.addEventListener('click', () => {
+        btn.addEventListener('click', (e) => {
+          e.preventDefault();
+          e.stopPropagation();
           const name = btn.dataset.wa;
           const msg  = encodeURIComponent(`Hi! I'm interested in the *${name}* package. Please share details.`);
           window.open(`https://wa.me/919876543210?text=${msg}`, '_blank', 'noopener');

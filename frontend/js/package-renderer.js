@@ -2,6 +2,8 @@
    PACKAGE-RENDERER.JS — Dynamic package rendering
    ════════════════════════════════════════════════════ */
 
+import { initSectionReveal } from './gsap-animations.js';
+
 export function renderPackageCards(packages, containerId = 'packages-grid') {
   const container = document.getElementById(containerId);
   if (!container) return;
@@ -211,4 +213,11 @@ export function renderPackageDetail(pkg) {
   document.querySelectorAll('[data-whatsapp]').forEach(btn => {
     btn.dataset.whatsapp = pkg.title;
   });
+
+  // Re-init reveal animations for dynamic content (itinerary, reviews)
+  setTimeout(() => {
+    if (typeof initSectionReveal === 'function') {
+      initSectionReveal();
+    }
+  }, 100);
 }

@@ -81,8 +81,12 @@ export function initHeroZoom() {
 export function initSectionReveal() {
   if (!ST) return;
 
+  // Refresh ScrollTrigger to account for new content height
+  ST.refresh();
+
   // Fade up elements
-  document.querySelectorAll('.anim-fade-up').forEach((el, i) => {
+  document.querySelectorAll('.anim-fade-up:not(.init)').forEach((el, i) => {
+    el.classList.add('init');
     gsap.to(el, {
       opacity: 1, y: 0,
       duration: 0.75,
@@ -97,7 +101,8 @@ export function initSectionReveal() {
   });
 
   // Fade left
-  document.querySelectorAll('.anim-fade-left').forEach(el => {
+  document.querySelectorAll('.anim-fade-left:not(.init)').forEach(el => {
+    el.classList.add('init');
     gsap.to(el, {
       opacity: 1, x: 0,
       duration: 0.75, ease: 'power3.out',
@@ -106,7 +111,8 @@ export function initSectionReveal() {
   });
 
   // Fade right
-  document.querySelectorAll('.anim-fade-right').forEach(el => {
+  document.querySelectorAll('.anim-fade-right:not(.init)').forEach(el => {
+    el.classList.add('init');
     gsap.to(el, {
       opacity: 1, x: 0,
       duration: 0.75, ease: 'power3.out',
@@ -115,7 +121,8 @@ export function initSectionReveal() {
   });
 
   // Scale up
-  document.querySelectorAll('.anim-scale-up').forEach((el, i) => {
+  document.querySelectorAll('.anim-scale-up:not(.init)').forEach((el, i) => {
+    el.classList.add('init');
     gsap.to(el, {
       opacity: 1, scale: 1,
       duration: 0.65, ease: 'back.out(1.5)',
@@ -125,7 +132,8 @@ export function initSectionReveal() {
   });
 
   // Stagger card groups
-  document.querySelectorAll('.stagger-group').forEach(group => {
+  document.querySelectorAll('.stagger-group:not(.init)').forEach(group => {
+    group.classList.add('init');
     const children = group.children;
     gsap.from(children, {
       opacity: 0, y: 50,
