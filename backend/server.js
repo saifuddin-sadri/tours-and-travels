@@ -2,6 +2,7 @@ require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const path = require('path');
+const os = require('os');
 const connectDB = require('./config/database');
 const errorHandler = require('./middleware/errorHandler');
 
@@ -48,10 +49,21 @@ app.use(errorHandler);
 
 // ─── Start Server ─────────────────────────────────────────────────
 const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => {
+app.listen(PORT, '0.0.0.0', () => {
+  const nets = os.networkInterfaces();
+  let localIp = 'localhost';
+  for (const name of Object.keys(nets)) {
+    for (const net of nets[name]) {
+      if (net.family === 'IPv4' && !net.internal) {
+        localIp = net.address;
+        break;
+      }
+    }
+  }
+
   console.log(`\n🌍 Travel & Tours Server is running!`);
-  console.log(`🚀 Backend API: http://localhost:${PORT}/api`);
-  console.log(`🌐 Frontend:    http://localhost:${PORT}`);
+  console.log(`🚀 Local:           http://localhost:${PORT}`);
+  console.log(`📱 Mobile/Network:  http://${localIp}:${PORT}`);
   console.log(`\nAPI Endpoints:`);
   console.log(`  GET  /api/packages          - All packages`);
   console.log(`  GET  /api/packages/featured - Featured packages`);

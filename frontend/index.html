@@ -29,7 +29,7 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
 /* ══════════ NAVBAR ══════════ */
 .navbar{
   position:fixed;top:0;left:0;right:0;height:var(--nav-h);
-  z-index:1000;padding:0 40px;
+  z-index:1000;padding:0 var(--space-6);
   transition:background .4s,box-shadow .4s;
 }
 .navbar.solid{
@@ -257,7 +257,8 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
 }
 .flip-name{
   font-family:'Montserrat',sans-serif;font-weight:700;font-size:1.1rem;
-  color:var(--blue);margin-bottom:6px;
+  color:#fff;margin-bottom:6px;
+  text-shadow:0 2px 4px rgba(0,0,0,0.5);
 }
 .flip-price{
   font-family:'Montserrat',sans-serif;font-weight:800;font-size:1.4rem;
@@ -275,7 +276,7 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
 }
 .back-title{font-family:'Montserrat',sans-serif;font-weight:800;font-size:1.15rem;color:#fff;margin-bottom:6px}
 .back-dest{font-size:.82rem;color:var(--gold);margin-bottom:16px}
-.back-desc{font-size:.85rem;color:rgba(255,255,255,.75);line-height:1.65;flex:1;margin-bottom:16px}
+.back-desc{font-size:.85rem;color:rgba(255,255,255,0.95);line-height:1.65;flex:1;margin-bottom:16px}
 .back-includes{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:20px}
 .back-pill{
   font-size:.7rem;font-family:'Montserrat',sans-serif;font-weight:600;
@@ -494,6 +495,7 @@ footer{
   .contact-grid{grid-template-columns:1fr}
 }
 @media(max-width:768px){
+  .navbar{padding:0 var(--space-4)}
   .nav-links{display:none}
   .nav-hamburger{display:flex}
   .pkg-grid{grid-template-columns:1fr}

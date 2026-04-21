@@ -96,7 +96,7 @@ p  { font-size: var(--fs-base); color: var(--color-text-muted); }
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 4px 30px rgba(0,0,0,0.2);
 }
-.navbar-inner {
+.nav-inner {
   max-width: var(--max-width);
   margin: 0 auto;
   height: 100%;

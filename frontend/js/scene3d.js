@@ -299,7 +299,7 @@
     if (!grid) return;
 
     try {
-      const res  = await fetch('http://localhost:5000/api/packages/featured');
+      const res  = await fetch('/api/packages/featured');
       const data = await res.json();
       const pkgs = data.data || [];
 
@@ -437,7 +437,7 @@
       };
 
       try {
-        const res  = await fetch('http://localhost:5000/api/inquiries', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) });
+        const res  = await fetch('/api/inquiries', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) });
         const data = await res.json();
         if (!res.ok) throw new Error(data.error);
 
